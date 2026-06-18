@@ -1,0 +1,42 @@
+#include <Servo.h>
+
+// Mapeamento dos pinos (Ordem física: 1->3, 2->5, 3->6, 4->9, 5->10, 6->11)
+const int pinosServos[6] = {3, 5, 6, 9, 10, 11};
+Servo meusServos[6];
+
+void setup() {
+  // Inicializa os 6 servos na posição 0 graus (ponto de partida do seu loop)
+  for (int i = 0; i < 6; i++) {
+    meusServos[i].attach(pinosServos[i]); 
+    meusServos[i].write(0); 
+  }
+  delay(1000); // Aguarda 1 segundo para estabilizar os servos no início
+}
+
+void loop() {
+  
+  // === PASSO 1 e 2: Movimento sequencial (um por um) ===
+  for (int i = 0; i < 6; i++) {
+    meusServos[i].write(90);  // O servo da vez vai para 90 graus
+    delay(600);               // Tempo para ele chegar em 90°
+    
+    meusServos[i].write(0);   // O servo da vez volta para 0 graus
+    delay(600);               // Tempo para ele retornar
+  }
+  
+  delay(500); // Pequena pausa antes do movimento em grupo
+
+  // === PASSO 3: Todos giram juntos até o limite máximo (180°) ===
+  for (int i = 0; i < 6; i++) {
+    meusServos[i].write(180); 
+  }
+  delay(1500); // Tempo para todos completarem o movimento até 180°
+
+  // === PASSO 4: Todos voltam juntos para o 0° ===
+  for (int i = 0; i < 6; i++) {
+    meusServos[i].write(0); 
+  }
+  delay(1500); // Tempo para todos voltarem com segurança para 0°
+
+  // O loop termina aqui e recomeça automaticamente do Servo 1!
+}
