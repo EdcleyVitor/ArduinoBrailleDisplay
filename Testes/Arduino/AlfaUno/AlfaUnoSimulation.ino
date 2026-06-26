@@ -104,13 +104,17 @@ void loop() {
       ultimoTempo = millis();
 
       if (letraIndex < palavraAtual.length()) {
+        char letraAnterior = palavraAtual[letraIndex-1];
         char letra = palavraAtual[letraIndex];
 
         if (letra == ' ') {
           Serial.println(" [Espaço]");
           todosParaBaixo();
-          bipEspaco();
+          bip();
         } 
+        else if (letraAnterior == letra) {
+          bip();
+        }
         else if (letra >= 'a' && letra <= 'z') {
           mostrarLetra(letra - 'a');
         }
@@ -155,6 +159,6 @@ void todosParaBaixo() {
   }
 }
 
-void bipEspaco() {
+void bip() {
   tone(buzzerPin, 800, 120);
 }
