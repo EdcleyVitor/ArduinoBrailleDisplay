@@ -1,0 +1,24 @@
+name: braille_bridge_v4
+description: BrailleBridge Versão 4 - Design profissional com animação de intro
+publish_to: 'none'
+version: 4.0.0+4
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_blue_plus: ^1.35.2
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
