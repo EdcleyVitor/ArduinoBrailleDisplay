@@ -28,7 +28,6 @@ Primeira versão funcional do aplicativo BrailleBridge. Esta versão establece a
 
 ## Problemas conhecidos
 
-- A conexão BLE é perdida ao trocar de tela
 - Sem opções de personalização
 - Interface básica sem navegação por abas
 
