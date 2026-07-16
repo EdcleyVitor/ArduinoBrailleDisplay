@@ -27,19 +27,34 @@ class _SplashScreenState extends State<SplashScreen>
     );
 
     _fadeLogo = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(parent: _controller, interval: const Duration(milliseconds: 0, end: 600), curve: Curves.easeOut),
+      CurvedAnimation(
+        parent: _controller,
+        curve: const Interval(0.0, 0.4, curve: Curves.easeOut),
+      ),
     );
     _scaleLogo = Tween<double>(begin: 0.5, end: 1.0).animate(
-      CurvedAnimation(parent: _controller, interval: const Duration(milliseconds: 0, end: 600), curve: Curves.elasticOut),
+      CurvedAnimation(
+        parent: _controller,
+        curve: const Interval(0.0, 0.4, curve: Curves.elasticOut),
+      ),
     );
     _fadeText = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(parent: _controller, interval: const Duration(milliseconds: 400, end: 900), curve: Curves.easeOut),
+      CurvedAnimation(
+        parent: _controller,
+        curve: const Interval(0.27, 0.6, curve: Curves.easeOut),
+      ),
     );
     _slideText = Tween<Offset>(begin: const Offset(0, 0.3), end: Offset.zero).animate(
-      CurvedAnimation(parent: _controller, interval: const Duration(milliseconds: 400, end: 900), curve: Curves.easeOutCubic),
+      CurvedAnimation(
+        parent: _controller,
+        curve: const Interval(0.27, 0.6, curve: Curves.easeOutCubic),
+      ),
     );
     _fadeDots = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(parent: _controller, interval: const Duration(milliseconds: 700, end: 1200), curve: Curves.easeOut),
+      CurvedAnimation(
+        parent: _controller,
+        curve: const Interval(0.47, 0.8, curve: Curves.easeOut),
+      ),
     );
 
     _controller.forward();
@@ -171,16 +186,12 @@ class _SplashScreenState extends State<SplashScreen>
     return AnimatedBuilder(
       animation: _controller,
       builder: (context, child) {
-        final start = Duration(milliseconds: 800 + index * 200);
-        final end = Duration(milliseconds: 1200 + index * 200);
+        final begin = (0.53 + index * 0.13);
+        final end = (0.8 + index * 0.13);
         final opacity = Tween<double>(begin: 0.0, end: 1.0).animate(
           CurvedAnimation(
             parent: _controller,
-            interval: Interval(
-              start.inMilliseconds / _controller.duration!.inMilliseconds,
-              end.inMilliseconds / _controller.duration!.inMilliseconds,
-              curve: Curves.easeOut,
-            ),
+            curve: Interval(begin.clamp(0.0, 1.0), end.clamp(0.0, 1.0), curve: Curves.easeOut),
           ),
         );
         return Opacity(
