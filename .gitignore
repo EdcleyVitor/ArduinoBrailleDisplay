@@ -33,5 +33,5 @@ macos/Flutter/ephemeral/
 *.ipa
 *.app
 
-# except our stored APKs
-!APKS/*.apk
+# except stored APKs in version folders
+!App/Versao*/*.apk
