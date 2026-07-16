@@ -114,7 +114,6 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Status card
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(16),
@@ -156,10 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-
             const SizedBox(height: 20),
-
-            // Text input
             const Text(
               'Texto para Display Braille:',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -177,10 +173,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 filled: true,
               ),
             ),
-
             const SizedBox(height: 20),
-
-            // Braille preview
             const Text(
               'Visualização Braille:',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -201,7 +194,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          _formatBrailleDisplay(_braillePreview),
+                          _braillePreview,
                           style: const TextStyle(
                             fontSize: 24,
                             fontFamily: 'monospace',
@@ -220,10 +213,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
             ),
-
             const SizedBox(height: 24),
-
-            // Send button
             SizedBox(
               height: 56,
               child: ElevatedButton.icon(
@@ -239,7 +229,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-
             if (!_isConnected) ...[
               const SizedBox(height: 8),
               const Text(
@@ -252,16 +241,5 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
-  }
-
-  String _formatBrailleDisplay(String braille) {
-    final buffer = StringBuffer();
-    for (int i = 0; i < braille.length; i += 6) {
-      final end = (i + 6 <= braille.length) ? i + 6 : braille.length;
-      final cell = braille.substring(i, end);
-      buffer.write('⠁⠃⠉'[i ~/ 6 % 3]);
-      buffer.write('[$cell] ');
-    }
-    return buffer.toString();
   }
 }
