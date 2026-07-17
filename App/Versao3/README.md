@@ -4,6 +4,10 @@
 
 Versão completa e estável do aplicativo BrailleBridge. Corrige o problema de desconexão BLE, adiciona suporte a temas e reorganiza as configurações em seções lógicas.
 
+## Status do Hardware
+
+O ESP32 idespark (com display OLED integrado) originalmente utilizado neste projeto **sofreu uma falha na porta de compilação/micro USB**, tornando-o inutilizável para programação. O dispositivo será levado a um especialista para tentativa de recuperação. Enquanto isso, os testes estão sendo realizados com um ESP32 comum.
+
 ## Novidades
 
 ### BLE Singleton (Service)

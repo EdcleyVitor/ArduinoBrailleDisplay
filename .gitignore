@@ -10,7 +10,7 @@ build/
 pubspec.lock
 
 # Android
-android/.gradle/
+**/.gradle/
 android/app/build/
 android/local.properties
 android/key.properties
@@ -28,10 +28,9 @@ macos/Pods/
 macos/Flutter/ephemeral/
 
 # Platform builds
-*.apk
 *.aab
 *.ipa
 *.app
 
-# except stored APKs in version folders
-!App/Versao*/*.apk
+# Generated build artifacts (not source)
+**/build/

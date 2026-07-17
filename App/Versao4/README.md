@@ -1,41 +1,32 @@
 # BrailleBridge - Versão 4.0.0
 
-## O que mudou nesta versão?
+## IMPORTANTE - Aviso sobre esta versão
 
-Redesign completo com foco em experiência visual. Splash screen animada, preview Braille com 6 pontos idêntico ao ESP32 e identidade visual com logo.
+Esta versão é **apenas uma atualização visual/estética**. Ela NÃO é funcional. Foi criada apenas para aprimorar o design do aplicativo, mas acidentalmente foram removidas várias funcionalidades que existiam na Versão 3 (conexão BLE real, sistema de temas, conversor Braille completo). **A Versão 5 será a versão completa que une o design da v4 com toda a funcionalidade da v3.**
 
-## Novidades
+## Status do Hardware
 
-### Splash Screen Animada
-- Animação fluida de 1.5 segundos com fade + scale na logo
-- Transição suave para o app principal
-- **Só aparece na primeira vez** que o app é aberto (controlado por SharedPreferences)
-- Se o app estiver nas abas recentes, não aparece a intro
+O ESP32 idespark (com display OLED integrado) originalmente utilizado neste projeto **sofreu uma falha na porta de compilação/micro USB**, tornando-o inutilizável para programação. O dispositivo será levado a um especialista para tentativa de recuperação. Enquanto isso, os testes estão sendo realizados com um ESP32 comum conectado a 6 LEDs.
 
-### Logo do Projeto
-- Logo centralizada na splash screen
-- Identidade visual consistente com o projeto
+## O que esta versão trouxe (apenas visual)
 
-### Preview Braille com 6 Pontos
-- Visualização idêntica ao display OLED do ESP32
-- Layout de 2 colunas x 3 linhas com pontos animados
-- Pontos acendem em tempo real conforme você digita
-- Mostra a letra correspondente ao lado
+- Splash screen animada na primeira abertura
+- Logo do projeto no app
+- Preview Braille com 6 pontos (idêntico ao layout do ESP32)
+- Design com cor roxa (#6C63FF) e gradientes
+- Cards arredondados e ícones modernos
 
-### Design Profissional
-- Cor principal: Roxo (#6C63FF) com gradientes suaves
-- Cards com bordas arredondadas (24px) e sombras sutis
-- Ícones arredondados (rounded) em toda interface
-- Tipografia consistente com Poppins
-- Headers com ícone + título + subtítulo descritivo
-- Botões com elevação e sombras coloridas
+## O que foi removido (acidentalmente)
 
-### Configurações Renovadas
-- Seções: Personalização, Dispositivo, Informações
-- Slider de velocidade com tema personalizado
-- Cards com ícones coloridos e bordas sutis
+- Conexão BLE real (substituída por código falso)
+- Scan de dispositivos (substituído por delay de 3 segundos)
+- Sistema de temas (Claro/Escuro/Sistema)
+- Seletor de cores
+- Conversor Braille completo (números, maiúsculas, indicadores)
+- Link para GitHub
+- Dependências: permission_handler, url_launcher
 
-## Estrutura
+## Arquitetura
 
 ```
 lib/
@@ -43,10 +34,10 @@ lib/
 ├── screens/
 │   ├── splash_screen.dart       # Intro animada
 │   ├── main_screen.dart         # Container de abas
-│   ├── connection_screen.dart   # Conexão BLE
+│   ├── connection_screen.dart   # Conexão BLE (NÃO FUNCIONAL)
 │   ├── message_screen.dart      # Envio + preview 6 pontos
-│   ├── settings_screen.dart     # Config
-│   └── scan_screen.dart         # Scan BLE
+│   ├── settings_screen.dart     # Config (só visual)
+│   └── scan_screen.dart         # Scan (NÃO FUNCIONAL)
 assets/
 ├── logo.png                     # Logo do projeto
 ```
@@ -57,8 +48,6 @@ assets/
 - **Bluetooth**: flutter_blue_plus
 - **Fontes**: google_fonts (Poppins)
 - **Persistência**: shared_preferences
-- **Firmware**: Arduino C++ (ESP32)
-- **Display**: SSD1306 OLED 0.96"
 
 ## Autor
 
