@@ -32,7 +32,7 @@ A Versao 5 e a **uniao do design da Versao 4 com toda a funcionalidade da Versao
 **Correcao:** Removido o fallback invalido. Agora so tenta write com resposta (correto para NUS) e mostra erro claro se falhar.
 
 ### 4. Bluetooth nao encontra ESP (corrigido)
-**Problema:** As vezes o scan nao encontrava o ESP32 e o usuario precisava reiniciar o celular.
+**Problema:** As vezes o scan nao encontrava o ESP32 e o usuario precisava reiniciar o Esp32.
 
 **Correcoes:**
 - Scan filtra dispositivos com nome relevante (Braille, BLE, ESP)
