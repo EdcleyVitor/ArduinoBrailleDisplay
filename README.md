@@ -16,6 +16,7 @@
 - [Estrutura do Repositório](#-estrutura-do-repositório)
 - [Como Executar](#-como-executar)
 - [Cronograma de Desenvolvimento](#-cronograma-de-desenvolvimento)
+- [Roadmap](#-roadmap)
 - [Autores e Vinculação](#-autores-e-vinculação)
 
 ---
@@ -80,4 +81,31 @@ O circuito adota uma separação estrita de energia para proteger os pinos lógi
 ### Passo a Passo
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
+   git clone https://github.com/EdcleyVitor/ArduinoBrailleDisplay.git
+   ```
+
+---
+
+## 🗺️ Roadmap
+
+### Versões Lançadas
+
+| Versão | Status | Descrição |
+|:------:|:------:|:----------|
+| v1 | ✅ Lançada | Protótipo inicial — LEDs base, comunicação BLE básica |
+| v2 | ✅ Lançada | Texto → Braille, envio de caracteres |
+| v3 | ✅ Lançada | Correções de estabilidade e comunicação |
+| v4 | ✅ Lançada | Melhorias na interface e performance |
+| v5 | ✅ Lançada | Gerenciamento de configurações e persistência |
+| v6 | ✅ Lançada | Tela de suporte, log de erros, exportação |
+| v7 | ✅ Lançada | Splash animada, personalização total, tema Neon |
+| v8 | ✅ Lançada | Preferências do App, Braille acentuado (ABNT), protocolo por padrão |
+
+### Em Desenvolvimento
+
+| Versão | Status | Descrição |
+|:------:|:------:|:----------|
+| v9 | 🔧 Em desenvolvimento | Lançamento previsto nos próximos dias |
+| v10 | 🔧 Em desenvolvimento | Lançamento previsto nos próximos dias (serial, após v9) |
+
+> **Nota:** As versões 9 e 10 encontram-se em fase final de desenvolvimento e serão lançadas de forma serial nos próximos dias.
