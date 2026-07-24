@@ -88,24 +88,22 @@ O circuito adota uma separação estrita de energia para proteger os pinos lógi
 
 ## 🗺️ Roadmap
 
-### Versões Lançadas
+### Versoes Lançadas
 
-| Versão | Status | Descrição |
+| Versao | Status | Descricao |
 |:------:|:------:|:----------|
-| v1 | ✅ Lançada | Protótipo inicial — LEDs base, comunicação BLE básica |
-| v2 | ✅ Lançada | Texto → Braille, envio de caracteres |
-| v3 | ✅ Lançada | Correções de estabilidade e comunicação |
-| v4 | ✅ Lançada | Melhorias na interface e performance |
-| v5 | ✅ Lançada | Gerenciamento de configurações e persistência |
-| v6 | ✅ Lançada | Tela de suporte, log de erros, exportação |
-| v7 | ✅ Lançada | Splash animada, personalização total, tema Neon |
-| v8 | ✅ Lançada | Preferências do App, Braille acentuado (ABNT), protocolo por padrão |
+| v1 | ✅ Lancada | Prototipo inicial — LEDs base, comunicacao BLE basica |
+| v2 | ✅ Lancada | Texto → Braille, envio de caracteres |
+| v3 | ✅ Lancada | Correcoes de estabilidade e comunicacao |
+| v4 | ✅ Lancada | Melhorias na interface e performance |
+| v5 | ✅ Lancada | Gerenciamento de configuracoes e persistencia |
+| v6 | ✅ Lancada | Tela de suporte, log de erros, exportacao |
+| v7 | ✅ Lancada | Splash animada, personalizacao total, tema Neon |
+| v8 | ✅ Lancada | Preferencias do App, Braille acentuado (ABNT), protocolo padrao |
+| v9 | ✅ Lancada | Multi-dispositivo BLE, assinatura, sincronizacao de timming |
 
 ### Em Desenvolvimento
 
-| Versão | Status | Descrição |
+| Versao | Status | Descricao |
 |:------:|:------:|:----------|
-| v9 | 🔧 Em desenvolvimento | Lançamento previsto nos próximos dias |
-| v10 | 🔧 Em desenvolvimento | Lançamento previsto nos próximos dias (serial, após v9) |
-
-> **Nota:** As versões 9 e 10 encontram-se em fase final de desenvolvimento e serão lançadas de forma serial nos próximos dias.
+| v10 | 🔧 Em desenvolvimento | Mais caracteres Braille + verificacao geral |

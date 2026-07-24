@@ -1,15 +1,15 @@
-# BrailleBridge - Versão 1.0.0
+# BrailleBridge - Versao 1.0.0
 
-## O que é esta versão?
+## O que e esta versao?
 
-Primeira versão funcional do aplicativo BrailleBridge. Esta versão establece a comunicação básica entre o app e o ESP32 via Bluetooth Low Energy (BLE).
+Primeira versao funcional do aplicativo BrailleBridge. Esta versao estabelece a comunicacao basica entre o app e o ESP32 via Bluetooth Low Energy (BLE).
 
 ## Funcionalidades
 
-- **Conexão Bluetooth**: Escaneia e conecta ao ESP32 "BrailleBridge"
+- **Conexao Bluetooth**: Escaneia e conecta ao ESP32 "BrailleBridge"
 - **Envio de texto**: Digita um texto e envia para o display Braille
-- **Pré-visualização**: Mostra o padrão Braille antes de enviar
-- **Conversor**: Converte texto (a-z, 0-9) em código Braille
+- **Pre-visualizacao**: Mostra o padrao Braille antes de enviar
+- **Conversor**: Converte texto (a-z, 0-9) em codigo Braille
 
 ## Como funciona
 
@@ -20,16 +20,16 @@ Primeira versão funcional do aplicativo BrailleBridge. Esta versão establece a
 
 ## O que foi feito
 
-- Configuração do projeto Flutter do zero
-- Implementação do serviço BLE com Nordic UART Service (NUS)
-- Criação do conversor de texto para Braille
-- Interface simples com uma única tela
+- Configuracao do projeto Flutter do zero
+- Implementacao do servico BLE com Nordic UART Service (NUS)
+- Criacao do conversor de texto para Braille
+- Interface simples com uma unica tela
 - Firmware ESP32 com display OLED 0.96"
 
 ## Problemas conhecidos
 
-- Sem opções de personalização
-- Interface básica sem navegação por abas
+- Sem opcoes de personalizacao
+- Interface basica sem navegacao por abas
 
 ## Tecnologias utilizadas
 
@@ -40,7 +40,7 @@ Primeira versão funcional do aplicativo BrailleBridge. Esta versão establece a
 
 ## Autor
 
-**Edcley Vitor** - Desenvolvedor  
+**Edcley Vitor** - Desenvolvedor
 **Josecley Fialho** - Orientador
 
 Data: Julho 2026

@@ -1,37 +1,37 @@
-# BrailleBridge - Versão 3.0.0
+# BrailleBridge - Versao 3.0.0
 
-## O que mudou nesta versão?
+## O que mudou nesta versao?
 
-Versão completa e estável do aplicativo BrailleBridge. Corrige o problema de desconexão BLE, adiciona suporte a temas e reorganiza as configurações em seções lógicas.
+Versao completa e estavel do aplicativo BrailleBridge. Corrige o problema de desconexao BLE, adiciona suporte a temas e reorganiza as configuracoes em secoes logicas.
 
 ## Status do Hardware
 
-O ESP32 idespark (com display OLED integrado) originalmente utilizado neste projeto **sofreu uma falha na porta de compilação/micro USB**, tornando-o inutilizável para programação. O dispositivo será levado a um especialista para tentativa de recuperação. Enquanto isso, os testes estão sendo realizados com um ESP32 comum.
+O ESP32 idespark (com display OLED integrado) originalmente utilizado neste projeto **sofreu uma falha na porta de compilacao/micro USB**, tornando-o inutilizavel para programacao. Os testes estao sendo realizados com um ESP32 comum.
 
 ## Novidades
 
 ### BLE Singleton (Service)
-- **Correção do bug**: A conexão BLE não é mais perdida ao trocar de abas
-- Serviço BLE centralizado que mantém a conexão ativa em segundo plano
-- Reconexão automática quando o dispositivo está disponível
+- **Correcao do bug**: A conexao BLE nao e mais perdida ao trocar de abas
+- Servico BLE centralizado que mantem a conexao ativa em segundo plano
+- Reconexao automatica quando o dispositivo esta disponivel
 
 ### Sistema de Temas
-- 3 modos: Claro, Escuro, Sistema (segue a configuração do celular)
+- 3 modos: Claro, Escuro, Sistema (segue a configuracao do celular)
 - 6 cores de destaque: Azul, Verde, Roxo, Vermelho, Laranja, Rosa
 - Salva automaticamente com SharedPreferences
 - Muda toda a interface em tempo real
 
-### Configurações Reorganizadas
-- **Personalização**: Temas e cores
-- **Configurações do Dispositivo**: Velocidade + funcionalidades futuras
-- **Informações**: Créditos, versão, link para GitHub
+### Configuracoes Reorganizadas
+- **Personalizacao**: Temas e cores
+- **Configuracoes do Dispositivo**: Velocidade + funcionalidades futuras
+- **Informacoes**: Creditos, versao, link para GitHub
 
 ### Melhorias Visuais
 - Google Fonts (Poppins) em todas as telas
 - Cards com sombra e bordas arredondadas
-- Gradientes nos cabeçalhos
+- Gradientes nos cabecalhos
 - Bottom Navigation Bar personalizada
-- Botão central de envio destacado
+- Botao central de envio destacado
 
 ## Como funciona
 
@@ -46,14 +46,14 @@ lib/
 ├── main.dart                    # Entry point + tema
 ├── screens/
 │   ├── main_screen.dart         # Container de abas
-│   ├── connection_screen.dart   # Tela 1: Conexão
+│   ├── connection_screen.dart   # Tela 1: Conexao
 │   ├── message_screen.dart      # Tela 2: Envio
 │   ├── settings_screen.dart     # Tela 3: Config
-│   └── scan_screen.dart         # Diálogo de scan BLE
+│   └── scan_screen.dart         # Dialogo de scan BLE
 ├── services/
 │   └── bluetooth_service.dart   # Singleton BLE
 └── utils/
-    └── braille_converter.dart   # Conversão texto↔Braille
+    └── braille_converter.dart   # Conversao texto/Braille
 ```
 
 ## Tecnologias utilizadas
@@ -61,14 +61,14 @@ lib/
 - **App**: Flutter 3.32 + Dart
 - **Bluetooth**: flutter_blue_plus (singleton)
 - **Fontes**: google_fonts (Poppins)
-- **Persistência**: shared_preferences
+- **Persistencia**: shared_preferences
 - **Links externos**: url_launcher
 - **Firmware**: Arduino C++ (ESP32)
 - **Display**: SSD1306 OLED 0.96"
 
 ## Autor
 
-**Edcley Vitor** - Desenvolvedor  
+**Edcley Vitor** - Desenvolvedor
 **Josecley Fialho** - Orientador
 
 Data: Julho 2026
