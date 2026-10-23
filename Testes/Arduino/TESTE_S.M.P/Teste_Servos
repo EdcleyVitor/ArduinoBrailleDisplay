@@ -1,3 +1,7 @@
+===========================================================================
+ATENÇÃO UTILISE ESSE TESTE APENAS EM SERVOS MG90S !!! 
+Caso tente em micro_servo e provavel que ele se danifique
+===========================================================================
 #include <Servo.h>
 
 // Mapeamento dos pinos (Ordem física: 1->3, 2->5, 3->6, 4->9, 5->10, 6->11)
